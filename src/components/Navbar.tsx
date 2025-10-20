@@ -51,7 +51,11 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="font-inter text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className={`font-inter transition-colors duration-200 font-medium ${
+                  isScrolled
+                    ? "text-foreground hover:text-primary"
+                    : "text-white hover:text-primary-foreground"
+                }`}
               >
                 {link.name}
               </a>
@@ -60,7 +64,9 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`md:hidden transition-colors ${
+              isScrolled ? "text-foreground" : "text-white"
+            }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
