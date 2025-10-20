@@ -5,6 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Base URL för GitHub Pages (ändra 'amris-style-reimagined' till ditt repo-namn)
+  base: process.env.NODE_ENV === 'production' ? '/amris-style-reimagined/' : '/',
   server: {
     host: "::",
     port: 8080,
