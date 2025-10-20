@@ -3,11 +3,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
-    { name: "Klippning", price: "530 kr" },
-    { name: "Kort hår Maskin", price: "430 kr" },
-    { name: "Barnklippning", price: "300 kr" },
-    { name: "Färg", price: "1000 kr" },
-    { name: "Slingor", price: "1200 kr" },
+    { name: "Klippning", price: "från 530 kr" },
+    { name: "Kort hår Maskin", price: "från 430 kr" },
+    { name: "Barnklippning", price: "från 300 kr" },
+    { name: "Färg", price: "från 1000 kr" },
+    { name: "Slingor", price: "från 1200 kr" },
   ];
 
   return (

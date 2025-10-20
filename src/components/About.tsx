@@ -13,7 +13,7 @@ const About = () => {
           Välkommen till Amri Style Salong!
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mt-12">
+  <div className="grid md:grid-cols-2 gap-12 items-start max-w-6xl mx-auto mt-12">
           <div className="space-y-6">
             <p className="font-inter text-lg leading-relaxed text-foreground/90">
               Välkommen till Amri Style Salong i Gamla stan, där din frisörupplevelse är mer än bara 
@@ -37,11 +37,12 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="rounded-lg overflow-hidden shadow-2xl">
+            {/* Limit portrait size and crop towards top so the face stays visible */}
+            <div className="rounded-lg overflow-hidden shadow-2xl max-w-sm md:max-w-md mx-auto">
               <img
                 src={amriPortrait}
                 alt="Amri - Frisör med över 40 års erfarenhet"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto max-h-[40rem] object-cover object-center"
               />
             </div>
           </div>
